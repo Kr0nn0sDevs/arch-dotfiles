@@ -1,0 +1,43 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 8,
+    "margin-left": 15,
+    "margin-right": 15,
+    "spacing": 10,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "cpu", "memory", "battery", "pulseaudio"],
+
+    "hyprland/workspaces": {
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "󰲠",
+            "2": "󰲢",
+            "3": "󰲤",
+            "4": "󰲦",
+            "5": "󰲨",
+            "6": "󰲪",
+            "7": "󰲬",
+            "8": "󰲮",
+            "9": "󰲰",
+            "10": "󰲲",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 10 // Esto fuerza a que siempre se vean los 10
+        }
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰖪 No WiFi",
+        "tooltip-format": "{signalStrength}% señal",
+        "on-click": "kitty -e nmtui" // Abre el gestor de red al dar click
+    },
+
+    "clock": { "format": "{:%H:%M}" }
+}
